@@ -1,9 +1,11 @@
+-- Creating database named edu_institute if not exists
+
 CREATE DATABASE IF NOT EXISTS edu_institute;
 
-# Using the database to create a table named students
+-- Using the database to create a table named students
 USE edu_institute;
 
-# Create table students
+-- Create table students
 CREATE TABLE IF NOT EXISTS students (
 	student_id INT PRIMARY KEY,
 	name VARCHAR(50),
@@ -12,7 +14,8 @@ CREATE TABLE IF NOT EXISTS students (
 	enrollment_date DATE,
 	program VARCHAR(50)
 );
-# Altering the table to add data into the columns
+    
+-- Altering the table to add data into the columns
 INSERT INTO students VALUES
 	(1, "Linda Sumbati", 25, "F", "2022-03-04", "Computer Science"),
     (2, "Sharon Cherop", 26, "F", "2022-03-04", "Data Science"),
@@ -20,7 +23,6 @@ INSERT INTO students VALUES
     (4, "Dabraham Immorah", 23, "M", "2022-03-04", "Software Engineering"),
     (5, "Dan Njuguna", 22, "M", "2022-03-04", "Cloud Security");
 
-# UPDATE students SET program = "Data Science" WHERE student_id = 3;
 -- a query to select all columns for all students in the "Data Science" program.
 SELECT * FROM students WHERE program = "Data Science";
 
@@ -28,7 +30,7 @@ SELECT * FROM students WHERE program = "Data Science";
 SELECT COUNT(*) AS "Total Students" FROM students;
 
 -- Function Usage
-# Function to display todays date in a column named Todays Date
+-- Function to display todays date in a column named Today's Date
 SELECT CURRENT_DATE() AS "Today's Date";
 
 --  a query to select the student names and their enrolment dates, but display the name column in uppercase
