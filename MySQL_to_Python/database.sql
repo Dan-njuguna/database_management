@@ -4,7 +4,6 @@ CREATE DATABASE IF NOT EXISTS edu_institute;
 
 -- Using the database to create a table named students
 USE edu_institute;
-
 -- Create table students
 CREATE TABLE IF NOT EXISTS students (
 	student_id INT PRIMARY KEY,
@@ -37,10 +36,10 @@ SELECT CURRENT_DATE() AS "Today's Date";
 SELECT UPPER(name) AS name, enrollment_date FROM students;
 
 -- a query to count the number of students in each program and display the results in descending order of count. Name the count column as Number of Students
-'SELECT program, COUNT(*) AS "Number of Students" 
+SELECT program, COUNT(*) AS "Number of Students" 
 FROM students
 GROUP BY program
-ORDER BY COUNT(*) DESC;'
+ORDER BY COUNT(*) DESC;
 
 -- a query to find the youngest student's name and age.
 SELECT name, age
